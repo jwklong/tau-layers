@@ -46,10 +46,22 @@ jobs:
       with:
         name: style.css
         path: dist/style.css
-  deploy:
+  clear:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: [typescript, scss]
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
+      with:
+        path: deploy
+    - name: Clear
+      run: |
+        rm -rf *
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: [clear]
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3

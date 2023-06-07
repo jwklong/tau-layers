@@ -6,6 +6,8 @@ on:
       - "**.md"
       - ".gitignore"
       - ".github/dependabot.yml"
+    branches-ignore:
+      - "deploy"
   pull_request:
   workflow_dispatch:
   

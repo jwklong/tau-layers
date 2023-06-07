@@ -45,7 +45,7 @@ jobs:
         path: dist/style.css
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/zerbermain'
+    if: github.ref == 'refs/heads/main'
     needs: [typescript, scss]
     steps:
     - name: Checkout 🛎️

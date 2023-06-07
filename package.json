@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "build-ts": "npx webpack",
-    "scss-update": "npx sass scss/index.scss public/css/style.css",
+    "scss-update": "npx sass scss/index.scss dist/style.css",
     "copy-public": "cp -vfR public/** dist"
   },
   "author": "jwklong",

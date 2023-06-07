@@ -1,4 +1,4 @@
-name: Build
+name: Build Site
 
 on:
   push:
@@ -9,9 +9,8 @@ on:
   pull_request:
   
 jobs:
-  build:
+  typescript:
     runs-on: ubuntu-latest
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
@@ -19,25 +18,58 @@ jobs:
     - name: Install Dependencies
       run: |
         npm install
-
     - name: Build Typescript
       run: |
         npm run build-ts
+    - name: Upload Built Typescript
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        name: index.js
+        path: dist/index.js
+  scss:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
 
-    - name: Build Sass
+    - name: Install Dependencies
       run: |
-        npm run sass-update
-
-    - name: Copy public/ To dist/
-      if: github.ref == 'refs/heads/main'
+        npm install
+    - name: Build SCSS
+      run: |
+        npm run scss-update
+    - name: Upload Built SCSS
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        name: style.css
+        path: dist/style.css
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/zerbermain'
+    needs: [typescript, scss]
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
+      
+    - name: Download JS
+      uses: actions/download-artifact@v3
+      with:
+        name: index.js
+        path: dist/
+    - name: Download CSS
+      uses: actions/download-artifact@v3
+      with:
+        name: style.css
+        path: dist/
+        
+    - name: Copy Public
       run: |
         npm run copy-public
       
     - name: Deploy
-      if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
          github_token: ${{ secrets.GITHUB_TOKEN }}
          publish_dir: ./dist
-         publish_branch: gh-pages
+         publish_branch: deploy
          allow_empty_commit: true

@@ -1,13 +1,13 @@
 :root {
   // colors
   @for $i from 0 through 5 {
-    --color-red-#{$i}:    darken(#ff3b21, #{10% * $i});
-    --color-orange-#{$i}: darken(#ff9f21, #{10% * $i});
-    --color-yellow-#{$i}: darken(#ffd621, #{10% * $i});
-    --color-green-#{$i}:  darken(#21ff3b, #{10% * $i});
-    --color-cyan-#{$i}:   darken(#21daff, #{10% * $i});
-    --color-blue-#{$i}:   darken(#213fff, #{10% * $i});
-    --color-purple-#{$i}: darken(#ae21ff, #{10% * $i});
-    --color-pink-#{$i}:   darken(#ff21b1, #{10% * $i});
+    --color-red-#{$i}:    #{darken(#ff3b21, 10% * $i)};
+    --color-orange-#{$i}: #{darken(#ff9f21, 10% * $i)};
+    --color-yellow-#{$i}: #{darken(#ffd621, 10% * $i)};
+    --color-green-#{$i}:  #{darken(#21ff3b, 10% * $i)};
+    --color-cyan-#{$i}:   #{darken(#21daff, 10% * $i)};
+    --color-blue-#{$i}:   #{darken(#213fff, 10% * $i)};
+    --color-purple-#{$i}: #{darken(#ae21ff, 10% * $i)};
+    --color-pink-#{$i}:   #{darken(#ff21b1, 10% * $i)};
   }
 }

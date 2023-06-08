@@ -36,7 +36,7 @@ body {
   position: absolute;
   height: calc(100% - 64px);
   top: 64px;
-  left: calc(100vw * (var(--current-content) - 1));
+  left: calc(-100vw * (var(--current-content) - 1));
   transition: left 1.5s cubic-bezier(0.3, 0, 0.4, 1);
   display: flex;
   & > div {
@@ -44,6 +44,6 @@ body {
     height: 100%;
     // placeholder to show off
     text-align: center;
-    text-size: 128px;
+    font-size: 128px;
   }
 }

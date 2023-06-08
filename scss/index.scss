@@ -11,3 +11,13 @@
     --color-pink-#{$i}:   #{darken(#ff21b1, 10% * $i)};
   }
 }
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  color: #fff;
+  background: var(--color-blue-4)
+}

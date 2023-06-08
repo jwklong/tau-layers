@@ -11,6 +11,10 @@ on:
   pull_request:
   workflow_dispatch:
   
+permissions:
+  pages: write
+  id-token: write
+
 jobs:
   typescript:
     runs-on: ubuntu-latest

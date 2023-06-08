@@ -1,0 +1,52 @@
+:root {
+  --color-red-0: darken(#ff3b21, 10% * $i);
+  --color-orange-0: darken(#ff9f21, 10% * $i);
+  --color-yellow-0: darken(#ffd621, 10% * $i);
+  --color-green-0: darken(#21ff3b, 10% * $i);
+  --color-cyan-0: darken(#21daff, 10% * $i);
+  --color-blue-0: darken(#213fff, 10% * $i);
+  --color-purple-0: darken(#ae21ff, 10% * $i);
+  --color-pink-0: darken(#ff21b1, 10% * $i);
+  --color-red-1: darken(#ff3b21, 10% * $i);
+  --color-orange-1: darken(#ff9f21, 10% * $i);
+  --color-yellow-1: darken(#ffd621, 10% * $i);
+  --color-green-1: darken(#21ff3b, 10% * $i);
+  --color-cyan-1: darken(#21daff, 10% * $i);
+  --color-blue-1: darken(#213fff, 10% * $i);
+  --color-purple-1: darken(#ae21ff, 10% * $i);
+  --color-pink-1: darken(#ff21b1, 10% * $i);
+  --color-red-2: darken(#ff3b21, 10% * $i);
+  --color-orange-2: darken(#ff9f21, 10% * $i);
+  --color-yellow-2: darken(#ffd621, 10% * $i);
+  --color-green-2: darken(#21ff3b, 10% * $i);
+  --color-cyan-2: darken(#21daff, 10% * $i);
+  --color-blue-2: darken(#213fff, 10% * $i);
+  --color-purple-2: darken(#ae21ff, 10% * $i);
+  --color-pink-2: darken(#ff21b1, 10% * $i);
+  --color-red-3: darken(#ff3b21, 10% * $i);
+  --color-orange-3: darken(#ff9f21, 10% * $i);
+  --color-yellow-3: darken(#ffd621, 10% * $i);
+  --color-green-3: darken(#21ff3b, 10% * $i);
+  --color-cyan-3: darken(#21daff, 10% * $i);
+  --color-blue-3: darken(#213fff, 10% * $i);
+  --color-purple-3: darken(#ae21ff, 10% * $i);
+  --color-pink-3: darken(#ff21b1, 10% * $i);
+  --color-red-4: darken(#ff3b21, 10% * $i);
+  --color-orange-4: darken(#ff9f21, 10% * $i);
+  --color-yellow-4: darken(#ffd621, 10% * $i);
+  --color-green-4: darken(#21ff3b, 10% * $i);
+  --color-cyan-4: darken(#21daff, 10% * $i);
+  --color-blue-4: darken(#213fff, 10% * $i);
+  --color-purple-4: darken(#ae21ff, 10% * $i);
+  --color-pink-4: darken(#ff21b1, 10% * $i);
+  --color-red-5: darken(#ff3b21, 10% * $i);
+  --color-orange-5: darken(#ff9f21, 10% * $i);
+  --color-yellow-5: darken(#ffd621, 10% * $i);
+  --color-green-5: darken(#21ff3b, 10% * $i);
+  --color-cyan-5: darken(#21daff, 10% * $i);
+  --color-blue-5: darken(#213fff, 10% * $i);
+  --color-purple-5: darken(#ae21ff, 10% * $i);
+  --color-pink-5: darken(#ff21b1, 10% * $i);
+}
+
+/*# sourceMappingURL=style.css.map */

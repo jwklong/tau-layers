@@ -1,1 +1,1 @@
-import Decimal from 'modules/break_eternity.js'
+import Decimal from './modules/break_eternity.js'

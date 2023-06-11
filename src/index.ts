@@ -1,1 +1,1 @@
-console.log('Hello World!')
+import Decimal from 'modules/break_eternity.js'

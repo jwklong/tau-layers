@@ -51,11 +51,58 @@ body {
     text-align: center;
     position: relative;
 
-    .locked {
+    & > .locked {
       width: 100%;
       height: 100%;
       backdrop-filter: blur(8px) brightness(0.7);
-      position: absolute;
+
+      & > img {
+        width: 20vh;
+        height: 20vh;
+        position: absolute;
+        left: 40%;
+        top: calc(50% - 10vh);
+      }
     }
   }
+}
+
+.content7 {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.achrow {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+
+  & > .achievement {
+    width: 10vw;
+    height: 10vw;
+    
+    &.show {
+      background: #222;
+      border: 3px solid #555;
+      border-radius: 2vw
+    }
+  }
+}
+
+.tooltip {
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+  user-select: none;
+  background: #000;
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 12vw;
+  margin-top: 0;
+}
+
+:not(:root):hover > .tooltip {
+  opacity: 1;
+  margin-top: -1vw
 }

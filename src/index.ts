@@ -29,7 +29,9 @@ for (let achRow in achievements) {
 const achievementContent = document.querySelector('.content7')
 
 for (var achRowI in achievements) {
+    console.log(achRowI)
     var achRow = achievements[achRowI]
+    console.log(achRow)
     var achRowElement = document.createElement('div')
     achRowElement.classList.add('achrow')
     for (var achievement of achRow) {

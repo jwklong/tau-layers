@@ -3,7 +3,13 @@ import { Achievement } from './classes/achievements'
 
 //achievements
 
-const achievements: (Achievement | undefined)[][] = Array(5).fill(Array(7).fill(undefined))
+const achievements: (Achievement | undefined)[][] = [
+    [undefined,undefined,undefined,undefined,undefined,undefined,undefined],
+    [undefined,undefined,undefined,undefined,undefined,undefined,undefined],
+    [undefined,undefined,undefined,undefined,undefined,undefined,undefined],
+    [undefined,undefined,undefined,undefined,undefined,undefined,undefined],
+    [undefined,undefined,undefined,undefined,undefined,undefined,undefined]
+]
 
 for (let achRow in achievements) {
     for (let achievement in achievements[achRow]) {

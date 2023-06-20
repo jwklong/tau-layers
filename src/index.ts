@@ -32,7 +32,7 @@ for (let achRow of achievements) {
     let achRowElement = document.createElement('div')
     achRowElement.classList.add('achrow')
     for (let achievement of achRow) {
-        achievement.attachElement(achRowElement)
+        achievement?.attachElement(achRowElement)
     }
     achievementContent?.appendChild(achRowElement)
 }

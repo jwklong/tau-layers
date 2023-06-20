@@ -26,14 +26,14 @@ export class Achievement {
 
         this.element = document.createElement('div')
         this.element.classList.add('achievement')
-        // TODO : add ach name or a icon
+        // TODO : add ach icon
 
         this.element.style.setProperty('--primary-color',`var(--color-${this.color}-0)`)
         this.element.style.setProperty('--secondary-color',`var(--color-${this.color}-3)`)
 
         const tooltipElement = document.createElement('div')
         tooltipElement.classList.add('tooltip')
-        tooltipElement.innerText = this.tooltip
+        tooltipElement.innerText = this.name.bold() + '<br>' + this.tooltip
         this.element.appendChild(tooltipElement)
     }
 

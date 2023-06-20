@@ -110,10 +110,10 @@ body {
   padding: 2px;
   border-radius: 8px;
   max-width: 12vw;
-  margin-top: 0;
+  margin-top: -10%;
 }
 
 :not(:root):hover > .tooltip {
   opacity: 1;
-  margin-top: 20%
+  margin-top: -20%
 }

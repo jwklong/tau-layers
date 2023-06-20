@@ -26,18 +26,15 @@ for (let achRow in achievements) {
         color: "green"
     })
 
-console.log(achievements)
-
 const achievementContent = document.querySelector('.content7')
 
-for (var achRow of achievements) {
-    console.log(achRow)
+for (var achRowI in achievements) {
+    var achRow = achievements[achRowI]
     var achRowElement = document.createElement('div')
     achRowElement.classList.add('achrow')
     for (var achievement of achRow) {
         achievement?.attachElement(achRowElement)
     }
-    console.log(achRowElement)
     achievementContent?.appendChild(achRowElement)
 }
 

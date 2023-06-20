@@ -51,30 +51,10 @@ jobs:
       with:
         name: style.css
         path: dist/style.css
-  clear:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    needs: [typescript, scss]
-    steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
-      with:
-        path: deploy-dev
-    - name: Clear
-      run: |
-        rm -rf *
-      
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: .
-         publish_branch: deploy-dev
-         allow_empty_commit: true
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    needs: [clear]
+    needs: [typescript, scss]
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3

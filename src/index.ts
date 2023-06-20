@@ -3,7 +3,7 @@ import { Achievement } from './classes/achievements'
 
 //achievements
 
-const achievements: (Achievement | undefined)[][] = Array(7).fill(Array(5).fill(undefined))
+const achievements: (Achievement | undefined)[][] = Array(5).fill(Array(7).fill(undefined))
 
 for (let achRow in achievements) {
     for (let achievement in achievements[achRow]) {
@@ -26,14 +26,18 @@ for (let achRow in achievements) {
         color: "green"
     })
 
+console.log(achievements)
+
 const achievementContent = document.querySelector('.content7')
 
-for (let achRow of achievements) {
-    let achRowElement = document.createElement('div')
+for (var achRow of achievements) {
+    console.log(achRow)
+    var achRowElement = document.createElement('div')
     achRowElement.classList.add('achrow')
-    for (let achievement of achRow) {
+    for (var achievement of achRow) {
         achievement?.attachElement(achRowElement)
     }
+    console.log(achRowElement)
     achievementContent?.appendChild(achRowElement)
 }
 

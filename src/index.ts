@@ -17,6 +17,7 @@ const achievements: Achievement[][] = Array(7).fill(Array(5).fill(new Achievemen
         tooltip: "Start the game.",
         visibility: () => true,
         unlock: () => true,
+        color: "green"
     })
 
 const achievementContent = document.getElementById('content7')

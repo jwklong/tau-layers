@@ -33,7 +33,7 @@ export class Achievement {
 
         const tooltipElement = document.createElement('div')
         tooltipElement.classList.add('tooltip')
-        tooltipElement.innerText = this.name.bold() + '<br>' + this.tooltip
+        tooltipElement.innerHTML = this.name.bold() + '<br>' + this.tooltip
         this.element.appendChild(tooltipElement)
     }
 

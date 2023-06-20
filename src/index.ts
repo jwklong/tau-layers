@@ -24,6 +24,13 @@ for (let achRow in achievements) {
 }
 
 //row 1
+    achievements[0][2] = new Achievement({
+        name: "Time Waster",
+        tooltip: "Do nothing for a certain amount of time.",
+        visibility: () => true,
+        unlock: () => false,
+        color: "purple"
+    })
     achievements[0][3] = new Achievement({
         name: "Getting Started",
         tooltip: "Start the game.",

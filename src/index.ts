@@ -3,13 +3,19 @@ import { Achievement } from './classes/achievements'
 
 //achievements
 
-const achievements: Achievement[][] = Array(7).fill(Array(5).fill(new Achievement({
-    name: "",
-    tooltip: "",
-    visibility: () => false,
-    unlock: () => false,
-    color: "blue"
-})))
+const achievements: (Achievement | undefined)[][] = Array(7).fill(Array(5).fill(undefined))
+
+for (let achRow in achievements) {
+    for (let achievement in achievements[achRow]) {
+        achievements[achRow][achievement] = new Achievement({
+            name: "",
+            tooltip: "",
+            visibility: () => false,
+            unlock: () => false,
+            color: "blue"
+        })
+    }
+}
 
 //row 1
     achievements[0][3] = new Achievement({

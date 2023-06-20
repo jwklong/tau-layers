@@ -20,7 +20,7 @@ const achievements: Achievement[][] = Array(7).fill(Array(5).fill(new Achievemen
         color: "green"
     })
 
-const achievementContent = document.getElementById('content7')
+const achievementContent = document.querySelector('.content7')
 
 for (let achRow of achievements) {
     let achRowElement = document.createElement('div')
@@ -30,3 +30,4 @@ for (let achRow of achievements) {
     }
     achievementContent?.appendChild(achRowElement)
 }
+

@@ -34,10 +34,7 @@ for (let achRow in achievements) {
 
 const achievementContent = document.querySelector('.content7')
 
-for (var achRowI in achievements) {
-    console.log(achRowI)
-    var achRow = achievements[achRowI]
-    console.log(achRow)
+for (var achRow of achievements) {
     var achRowElement = document.createElement('div')
     achRowElement.classList.add('achrow')
     for (var achievement of achRow) {
@@ -46,3 +43,10 @@ for (var achRowI in achievements) {
     achievementContent?.appendChild(achRowElement)
 }
 
+setInterval(() => {
+    for (var achRow of achievements) {
+        for (var achievement of achRow) {
+            achievement?.tick()
+        }
+    }
+}, 1000/60)

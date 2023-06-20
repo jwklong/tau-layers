@@ -3,7 +3,7 @@ import { Achievement } from './classes/achievements.js'
 
 //achievements
 
-const achievements: Achievement[][] = Array(7).fill(Array(5).fill(Achievement({
+const achievements: Achievement[][] = Array(7).fill(Array(5).fill(new Achievement({
     name: "",
     tooltip: "",
     visibility: () => false,
@@ -12,7 +12,7 @@ const achievements: Achievement[][] = Array(7).fill(Array(5).fill(Achievement({
 })))
 
 //row 1
-    achievements[0][3] = Achievement({
+    achievements[0][3] = new Achievement({
         name: "Getting Started",
         tooltip: "Start the game.",
         visibility: () => true,

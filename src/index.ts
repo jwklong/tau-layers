@@ -1,5 +1,6 @@
 import Decimal from './modules/break_eternity.js' // to use later
 import { Achievement } from './classes/achievements'
+import game from './data/game'
 
 //achievements
 
@@ -24,18 +25,18 @@ for (let achRow in achievements) {
 }
 
 //row 1
-    achievements[0][2] = new Achievement({
-        name: "Time Waster",
-        tooltip: "Do nothing for a certain amount of time.",
-        visibility: () => true,
-        unlock: () => false,
-        color: "purple"
-    })
     achievements[0][3] = new Achievement({
         name: "Getting Started",
         tooltip: "Start the game.",
         visibility: () => true,
         unlock: () => true,
+        color: "green"
+    })
+    achievements[0][4] = new Achievement({
+        name: "Minute of Tau",
+        tooltip: "Play the game for 60 seconds",
+        visibility: () => true,
+        unlock: () => game.timeSpent > 60,
         color: "green"
     })
 
@@ -51,9 +52,18 @@ for (var achRow of achievements) {
 }
 
 setInterval(() => {
+    game.timeSpent += 1/60
     for (var achRow of achievements) {
         for (var achievement of achRow) {
             achievement?.tick()
         }
     }
 }, 1000/60)
+
+addEventListener("keydown", (event) => {
+    if (event.key === 'ArrowLeft') {
+        document.getElementById('content')?.style.setProperty('--current-content',Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))-1)
+    } else if (event.key === 'ArrowRight') {
+        document.getElementById('content')?.style.setProperty('--current-content',Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))+1)
+    }
+});

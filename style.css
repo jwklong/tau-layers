@@ -61,6 +61,7 @@ body {
 .maintext {
   color: var(--color-blue-0);
   font-weight: bold;
+  text-shadow: 0 0 8px var(--color-blue-5);
 }
 
 #top {
@@ -68,6 +69,13 @@ body {
   height: 64px;
   position: fixed;
   background: var(--color-blue-2);
+  font-size: 48px;
+  text-align: center;
+}
+#top .beta {
+  background: var(--color-yellow-1);
+  padding: 4px;
+  border-radius: 16px;
 }
 
 #content {
@@ -89,24 +97,24 @@ body {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(8px) brightness(0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #content > div > .locked > img {
   width: 20vh;
   height: 20vh;
-  position: absolute;
-  left: 40%;
-  top: calc(50% - 10vh);
 }
 
 .content7 {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
 }
 
 .achrow {
   display: flex;
   justify-content: center;
+  margin-top: 2vw;
   gap: 2vw;
 }
 .achrow > .achievement {
@@ -132,7 +140,8 @@ body {
   transition: all 0.5s;
   pointer-events: none;
   user-select: none;
-  background: #000;
+  background: rgba(0, 0, 0, 0.8666666667);
+  backdrop-filter: blur(8px);
   padding: 2px;
   border-radius: 8px;
   max-width: 12vw;

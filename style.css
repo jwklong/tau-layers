@@ -136,6 +136,9 @@ body {
 .achrow > .achievement.show.unlocked {
   background: var(--primary-color);
 }
+.achrow > .achievement.show.unlocked > .tooltip b {
+  color: var(--primary-color);
+}
 
 .tooltip {
   opacity: 0;

@@ -60,6 +60,7 @@ setInterval(() => {
     }
 }, 1000/60)
 
+document.getElementById('content')?.style.setProperty('--current-content','1')
 addEventListener("keydown", (event) => {
     if (event.code === 'ArrowLeft') {
         document.getElementById('content')?.style.setProperty('--current-content',String(Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))-1))

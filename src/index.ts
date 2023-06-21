@@ -1,6 +1,6 @@
 import Decimal from './modules/break_eternity.js' // to use later
 import { Achievement } from './classes/achievements'
-import game from './data/game'
+import { game } from './data/game'
 
 //achievements
 
@@ -61,9 +61,9 @@ setInterval(() => {
 }, 1000/60)
 
 addEventListener("keydown", (event) => {
-    if (event.key === 'ArrowLeft') {
-        document.getElementById('content')?.style.setProperty('--current-content',Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))-1)
-    } else if (event.key === 'ArrowRight') {
-        document.getElementById('content')?.style.setProperty('--current-content',Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))+1)
+    if (event.code === 'ArrowLeft') {
+        document.getElementById('content')?.style.setProperty('--current-content',String(Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))-1))
+    } else if (event.code === 'ArrowRight') {
+        document.getElementById('content')?.style.setProperty('--current-content',String(Number(document.getElementById('content')?.style.getPropertyValue('--current-content'))+1))
     }
 });

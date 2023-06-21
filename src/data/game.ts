@@ -1,3 +1,3 @@
-export default game = {
+export const game = {
     timeSpent: 0
 }

@@ -107,7 +107,11 @@ body {
     }
 
     &.show.unlocked {
-      background: var(--primary-color)
+      background: var(--primary-color);
+
+      & > .tooltip b {
+        color: var(--primary-color)
+      }
     }
   }
 }

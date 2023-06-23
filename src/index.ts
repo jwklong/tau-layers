@@ -17,6 +17,7 @@ for (let achRow in achievements) {
         achievements[achRow][achievement] = new Achievement({
             name: "",
             tooltip: "",
+            symbol: "",
             visibility: () => false,
             unlock: () => false,
             color: "blue"
@@ -28,6 +29,7 @@ for (let achRow in achievements) {
     achievements[0][3] = new Achievement({
         name: "Getting Started",
         tooltip: "Start the game.",
+        symbol: "τ",
         visibility: () => true,
         unlock: () => true,
         color: "green"
@@ -35,6 +37,7 @@ for (let achRow in achievements) {
     achievements[0][4] = new Achievement({
         name: "Minute of Tau",
         tooltip: "Play the game for 60 seconds",
+        symbol: "M",
         visibility: () => true,
         unlock: () => game.timeSpent > 60,
         color: "green"

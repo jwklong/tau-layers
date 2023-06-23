@@ -92,22 +92,39 @@ body {
   & > .achievement {
     width: 10vw;
     height: 10vw;
+    background: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 2vw;
 
     --primary-color: var(--color-blue-0);
     --secondary-color: var(--color-blue-3);
+    --tertiary-color: var(--color-blue-5);
+
+    .symbol {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-size: 5vw;
+      font-weight: 600;
+      overflow: hidden;
+      color: var(--primary-color)
+    }
     
-    &:not(.show) > * {
+    &:not(.show) {
       display: none;
     }
 
-    &.show {
-      background: var(--secondary-color);
-      border: 3px solid var(--primary-color);
-      border-radius: 2vw
-    }
-
-    &.show.unlocked {
+    &.unlocked {
       background: var(--primary-color);
+
+      .symbol {
+        color: var(--tertiary-color);
+      }
 
       & > .tooltip b {
         color: var(--primary-color)

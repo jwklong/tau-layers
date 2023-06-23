@@ -1,6 +1,7 @@
 export class Achievement {
     name: string
     tooltip: string
+    symbol: string
     visibility: () => boolean
     unlock: () => boolean
     color: string
@@ -13,12 +14,14 @@ export class Achievement {
     constructor(args: {
         name: string
         tooltip: string
+        symbol: string
         visibility: () => boolean
         unlock: () => boolean
         color: string
     }) {
         this.name = args.name
         this.tooltip = args.tooltip
+        this.symbol = args.symbol
         this.visibility = args.visibility
         this.unlock = args.unlock
         this.color = args.color
@@ -26,15 +29,20 @@ export class Achievement {
 
         this.element = document.createElement('div')
         this.element.classList.add('achievement')
-        // TODO : add ach icon
 
         this.element.style.setProperty('--primary-color',`var(--color-${this.color}-0)`)
         this.element.style.setProperty('--secondary-color',`var(--color-${this.color}-3)`)
+        this.element.style.setProperty('--tertiary-color',`var(--color-${this.color}-5)`)
 
         const tooltipElement = document.createElement('div')
         tooltipElement.classList.add('tooltip')
         tooltipElement.innerHTML = this.name.bold() + '<br>' + this.tooltip
         this.element.appendChild(tooltipElement)
+
+        const symbolElement = document.createElement('div')
+        symbolElement.classList.add('symbol')
+        symbolElement.innerHTML = this.symbol
+        this.element.appendChild(symbolElement)
     }
 
     tick() {

@@ -125,6 +125,7 @@ body {
   background: var(--secondary-color);
   border: 3px solid var(--primary-color);
   border-radius: 2vw;
+  position: relative;
   --primary-color: var(--color-blue-0);
   --secondary-color: var(--color-blue-3);
   --tertiary-color: var(--color-blue-5);

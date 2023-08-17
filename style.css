@@ -168,6 +168,8 @@ body {
   border-radius: 8px;
   max-width: 12vw;
   margin-top: -10%;
+  position: relative;
+  z-index: 999;
 }
 
 :not(:root):hover > .tooltip {
